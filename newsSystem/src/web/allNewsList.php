@@ -83,7 +83,7 @@ else
 	$resource = mysql_query($sql) or die (mysql_error());
 	while($row = mysql_fetch_array($resource))
 	{
-		echo "<li>" . $row["bt"] . "</li>";
+		echo "<li><a href='showNews.php?xwdm=" . $row["xwdm"] . "'>" . $row["bt"] . "</a></li>";
 	}
 	?>
 	</ul>

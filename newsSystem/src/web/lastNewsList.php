@@ -1,6 +1,6 @@
 <?php
 include("../server/connect.php");
-$sql = "SELECT `bt`,`sj` FROM `xw` ORDER BY `sj` DESC LIMIT 0,10";
+$sql = "SELECT `xwdm`,`bt`,`sj` FROM `xw` ORDER BY `sj` DESC LIMIT 0,10";
 $resource = mysql_query($sql) or die(mysql_error());
 /*
 while ($row = mysql_fetch_array($resource))
@@ -21,7 +21,7 @@ while ($row = mysql_fetch_array($resource))
 	<?php
 	while($row = mysql_fetch_array($resource))
 	{
-		echo "<li>".$row["bt"].".....".$row["sj"]."</li>";	
+		echo "<li><a href='showNews.php?xwdm=" . $row["xwdm"] . "'>" .$row["bt"] . "</a></li>";	
 	}
 	?>
 	</ul>
